@@ -24,8 +24,8 @@ function App() {
           <a href="http://books.zuri.team" id="books" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Zuri Books</a>
           <a href="https://books.zuri.team/python-for-beginners?ref_id=cybergenie" id="book__python" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Python Books</a>
           <a href="https://background.zuri.team" id="pitch" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Background Check for Coders</a>
-          <a href="https://books.zuri.team/design-rules" id="contact" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Contact Me</a>
-          <Link to="/contact" id="book__design" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Design Books</Link>
+          <a href="https://books.zuri.team/design-rules" id="contact" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Design Books</a>
+          <Link to="/contact" id="book__design" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Contact Me</Link>
         </section>
         <section className="flex justify-center space-x-3 my-6">
           <img src={slackIcon} alt="" />
