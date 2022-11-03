@@ -1,10 +1,10 @@
 import '../App.css'
 import { Link } from "react-router-dom";
+import Footer from '../components/Footer'
 import profileImg from '../assets/profile-img.png'
 import slackIcon from '../assets/slack-icon.svg'
 import githubIcon from '../assets/github-icon.svg'
-import zuriLogo from '../assets/zuri-logo.svg'
-import i4gLogo from '../assets/i4g-logo.svg'
+
 
 function App() {
 
@@ -24,7 +24,7 @@ function App() {
           <a href="http://books.zuri.team" id="books" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Zuri Books</a>
           <a href="https://books.zuri.team/python-for-beginners?ref_id=cybergenie" id="book__python" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Python Books</a>
           <a href="https://background.zuri.team" id="pitch" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Background Check for Coders</a>
-          <a href="https://books.zuri.team/design-rules" id="book__design" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Design Books</a>
+          <a href="https://books.zuri.team/design-rules" id="contact" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Contact Me</a>
           <Link to="/contact" id="book__design" className="text-center bg-gray-200 hover:bg-gray-300 transition-all text-gray-900 rounded py-5">Design Books</Link>
         </section>
         <section className="flex justify-center space-x-3 my-6">
@@ -32,11 +32,7 @@ function App() {
           <img src={githubIcon} alt="" />
         </section>
       </main>
-      <footer className="space-y-5 md:space-y-0 border-t py-6 mb-6 md:flex md:items-center md:justify-between">
-        <img src={zuriLogo} alt="" />
-        <p className="text-gray-500">HNG Internship 9 Frontend Task</p>
-        <img src={i4gLogo} alt="" />
-      </footer>
+      <Footer />
     </div>
   )
 }
