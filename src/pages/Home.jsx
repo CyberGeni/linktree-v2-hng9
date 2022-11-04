@@ -9,7 +9,7 @@ import githubIcon from '../assets/github-icon.svg'
 function App() {
 
   return (
-    <div className="px-6 max-w-2xl md:max-w-3xl mx-auto font-['Inter']">
+    <div className="px-6 max-w-2xl sm:max-w-3xl mx-auto font-['Inter']">
       <header className="w-full">
         <img className="w-28 rounded-full mx-auto my-8" src={profileImg} alt="" id="profile__img" />
         <h1 className="text-center font-bold text-2xl my-4">Treasure Ajefu</h1>
