@@ -11,7 +11,7 @@ function FormInput(props) {
   return (
     <>
       <div className="w-full ">
-        <label className="text-gray-700">{label}</label>
+        <label className="text-gray-700 my-2 font-medium">{label}</label>
         <input 
             {...inputProps}
             onChange={onChange}
@@ -20,11 +20,10 @@ function FormInput(props) {
             focused={focused.toString()}
             className="flex border border-gray-400 rounded shadow px-3 py-2 w-full placeholder-slate-400 peer
             default:border-slate-400 focus:outline-none focus:border-sky-500
-            invalid:border-red-500 invalid:text-pink-600
-            focus:invalid:border-red-500
+            
             focus:ring-1 focus:ring-blue-200"
         />
-        <span className="text-red-500 invisible peer-invalid:visible">{errorMessage}</span>
+        <span className="text-sm text-red-500 invisible peer-invalid:visible">{errorMessage}</span>
       </div>
     </>
   );
