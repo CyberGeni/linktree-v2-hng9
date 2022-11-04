@@ -10,15 +10,12 @@ function FormInput(props) {
 
   return (
     <>
-      <div className="sm:w-full">
-        <label>{label}</label>
+      <div className="w-full ">
+        <label className="text-gray-700">{label}</label>
         <input 
             {...inputProps}
             onChange={onChange}
             onBlur={handleFocus}
-            onFocus={() =>
-              inputProps.name === "confirmPassword" && setFocused(true)
-            }
             id={id}
             focused={focused.toString()}
             className="flex border border-gray-400 rounded shadow px-3 py-2 w-full placeholder-slate-400 peer

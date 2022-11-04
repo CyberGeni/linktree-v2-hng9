@@ -23,7 +23,6 @@ function Contact() {
           errorMessage:
             "Please enter your first name.",
           label: "First name",
-          
           required: true,
         },
         {
@@ -62,21 +61,25 @@ function Contact() {
         <>
             <div className="px-6 max-w-2xl sm:max-w-3xl mx-auto font-['Inter']">
                 <main className='max-w-2xl space-y-3 my-2 mb-16 mx-auto'>
-                    <h1 className="mx-auto font-bold text-2xl md:text-3xl mt-12">Contact Me</h1>
+                    <h1 className="mx-auto font-bold text-2xl md:text-3xl mt-8">Contact Me</h1>
                     <p className=''>Hi there, contact me to ask me about anything you have in mind.</p>
-                    <form onSubmit={handleSubmit} className="max-w-2xl space-y-2 my-2 mb-16">
+                    <form onSubmit={handleSubmit} className="max-w-2xl space-y-3 my-2 mb-16">
                         {/* <div className='space-y-3 sm:flex sm:space-y-0 sm:w-full sm:space-x-4'>
                             <FormInput placeholder="Enter your first name" setUsername={setUsername} />
                             <FormInput placeholder="Enter your last name" />
                         </div> */}
-                        {inputs.map((input) => (
-                        <FormInput
-                            key={input.id}
-                            {...input}
-                            value={values[input.name]}
-                            onChange={onChange}
-                        />
-                        ))}
+                        <div className="md:grid md:grid-cols-2 md:gap-x-4 space-y-2">
+                            {inputs.map((input) => (
+                            <FormInput
+                                key={input.id}
+                                {...input}
+                                value={values[input.name]}
+                                onChange={onChange}
+                               
+                            />
+                            ))}
+                        </div>
+                        
                         {/* textarea */}
                         <div>
                             <label htmlFor="">Message</label>

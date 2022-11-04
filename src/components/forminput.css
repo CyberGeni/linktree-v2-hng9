@@ -2,6 +2,11 @@ span {
     color: red;
     display: none;
 }
+@media (min-width: 768px) {
+    #email {
+        width: 205%;
+    }
+}
 input:invalid[focused=true]{
     border: 1px solid red;
 }
