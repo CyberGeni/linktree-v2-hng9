@@ -1,15 +1,33 @@
+import { useState } from "react";
+import './forminput.css'
 function FormInput(props) {
+  const [focused, setFocused] = useState(false);
+  const { label, errorMessage, onChange, id, ...inputProps } = props;
+
+  const handleFocus = (e) => {
+    setFocused(true);
+  };
+
   return (
     <>
       <div className="sm:w-full">
-        <label htmlFor="">First Name</label>
+        <label>{label}</label>
         <input 
-            required
-            type={props.type} 
-            placeholder={props.placeholder} 
-            onChange={e=>props.setUsername(e.target.value)}
-            className="flex border invalid:border-red-600 border-gray-400 rounded shadow px-3 py-2 w-full"
+            {...inputProps}
+            onChange={onChange}
+            onBlur={handleFocus}
+            onFocus={() =>
+              inputProps.name === "confirmPassword" && setFocused(true)
+            }
+            id={id}
+            focused={focused.toString()}
+            className="flex border border-gray-400 rounded shadow px-3 py-2 w-full placeholder-slate-400 peer
+            default:border-slate-400 focus:outline-none focus:border-sky-500
+            invalid:border-red-500 invalid:text-pink-600
+            focus:invalid:border-red-500
+            focus:ring-1 focus:ring-blue-200"
         />
+        <span className="text-red-500 invisible peer-invalid:visible">{errorMessage}</span>
       </div>
     </>
   );
